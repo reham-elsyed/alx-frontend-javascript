@@ -1,9 +1,8 @@
 export default function createReportObject(employeesList) {
-    let allEmployees= structuredClone(employeesList)
-   return{
-    allEmployees,
-
- getNumberOfDepartments(){
-        return Object.keys(allEmployees).length;
-    }}
+  return {
+    allEmployees: employeesList,
+    getNumberOfDepartments() {
+      return Object.keys(this.allEmployees).length;
+    },
+  };
 }
